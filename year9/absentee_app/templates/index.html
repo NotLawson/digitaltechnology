@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Late Arrival</title>
+        <link rel="stylesheet" href="/static/css">
+    </head>
+    <body>
+            <h1>Late Arrivals</h1>
+            <h2>Scan below to sign in</h2>
+            <div class="camera">
+                <video id="video">Video stream not available.</video>
+                <br>
+                <button id="startbutton">Scan</button>
+            </div>
+            <h2 id="message"></h2>
+            <div id="action" hidden='true'>
+                <h2>Mark present?</h2>
+                <form action = '/mark' method = "post">
+                    <input type="text" name="name" id="name" value="Scanning..."></input>
+                    <select name="reason">
+                        <option value="late bus">Late Bus</option>
+                        <option value="an appointment">Appointment</option>
+                        <option value="an unlisted reason">Unlisted</option>
+                    </select>
+                    <input type="submit"></input>
+                </form>
+                <button id="notyou">Not you?</button>
+            </div>
+            <br>
+            <canvas id="canvas" hidden="true"></canvas>
+            <script src="/static/camera.js"></script>
+    </body>
+</html>
