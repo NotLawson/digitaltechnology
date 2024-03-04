@@ -17,9 +17,9 @@
                 <form action = '/mark' method = "post">
                     <input type="text" name="name" id="name" value="Scanning..."></input>
                     <select name="reason">
-                        <option value="late bus">Late Bus</option>
-                        <option value="an appointment">Appointment</option>
-                        <option value="an unlisted reason">Unlisted</option>
+                        <option value=" late bus">Late Bus</option>
+                        <option value="n appointment">Appointment</option>
+                        <option value="n unlisted reason">Unlisted</option>
                     </select>
                     <input type="submit"></input>
                 </form>
@@ -28,5 +28,9 @@
             <br>
             <canvas id="canvas" hidden="true"></canvas>
             <script src="/static/camera.js"></script>
+            <div id="log">
+                <h2>Late log:</h2>
+                {{ log_html | safe }}
+            </div>
     </body>
 </html>

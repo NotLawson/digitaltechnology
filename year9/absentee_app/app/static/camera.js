@@ -2,6 +2,8 @@ var width = 320;
 var height = 0;
 var streaming = false;
 
+
+// play the camera output 
 navigator.mediaDevices.getUserMedia({video: true, audio: false})
         .then(function (stream) {
             video.srcObject = stream;
@@ -10,7 +12,6 @@ navigator.mediaDevices.getUserMedia({video: true, audio: false})
         .catch(function (err) {
             console.log("An error occured! " + err);
         });
-
 video.addEventListener('canplay', function (ev) {
     if (!streaming) {
         height = video.videoHeight / (video.videoWidth / width);
@@ -23,19 +24,23 @@ video.addEventListener('canplay', function (ev) {
     }
 }, false);
 
+//when the button clicked
 startbutton.addEventListener('click', function (ev) {
-    takepicture();
+    takepicture(); // take a picture
     ev.preventDefault();
 }, false);
+
+//when clicked not you
 notyou.addEventListener('click', function (ev) {
-    takepicture();
+    takepicture(); // retake picture
     ev.preventDefault();
 }, false);
-clearphoto();
+
+clearphoto(); // clear the photo canvas before anything
 
 
 
-function clearphoto() {
+function clearphoto() { // clears the photo canvas
     var context = canvas.getContext('2d');
     context.fillStyle = "#AAA";
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -46,9 +51,9 @@ function takepicture() {
     if (width && height) {
         canvas.width = width;
         canvas.height = height;
-        context.drawImage(video, 0, 0, width, height);
+        context.drawImage(video, 0, 0, width, height); // draws the image capture on the canvas
 
-        var dataURL = canvas.toDataURL("image/jpeg", 0.95);
+        var dataURL = canvas.toDataURL("image/jpeg", 0.95); // 
         if (dataURL && dataURL != "data:,") {
             var fileName = generateImageName();
             uploadimage(dataURL, fileName);

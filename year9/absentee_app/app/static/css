@@ -2,10 +2,13 @@ h1 {text-align: center;}
 p {text-align: center;}
 div {text-align: center;}
 h2 {text-align: center;}
+ul { display: inline-block; text-align: left; }
+li {text-align: center;}
 
-h1, h2, p {
+h1, h2, p, li {
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
     background-color: aliceblue;
+    
 }

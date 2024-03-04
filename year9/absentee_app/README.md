@@ -1,19 +1,10 @@
-# Absentee App
-## Run locally
-Open this folder
-<br>
-Run:
-<br>
-    ```pip install tensorflow flask pillow numpy```
-<br>
-Then you can run.
+# Absentee app
 
-## Run on docker
-Open this folder
-<br>
-Run:
-<br>
-    ```docker build -t <name> .```
-<br>
-This builds the docker container with the Dockerfile and only the contents of this folder
-  
+## Docker (Recomended)
+
+```docker run --name absentee_app -v /etc/localtime:/etc/localtime:ro -p <outside>:8080 -d ghcr.io/notlawson/absentee_app```
+
+## Python
+
+Install packages <br> `pip install tensorflow-cpu==2.15.0 pillow flask numpy`
+<br> Run with <br> `python main.py`
