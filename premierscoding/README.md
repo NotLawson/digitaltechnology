@@ -1,5 +1,7 @@
 # Premier's Coding Challenge 2024
 
+# NOTE: Use https://github.com/NotLawson/premierscodingchallenge as the main project link. Everything will be here once finished, but until then, this repository won't be updated
+
 <b>[Notion page for project tracking](https://notlawson.notion.site/Digital-Tech-Project-29619290f81d4ec6b35c3d7f72906a30?pvs=4)</b>
 
 This year for Term 2 and 3, we make a submission for the [Premier's Coding Challenge.](https://education.qld.gov.au/about-us/events-awards/awards-competitions/premiers-coding-challenge)
