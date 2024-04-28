@@ -39,10 +39,12 @@ It would be a website that took your notes in Markdown. Sort of similar to [Noti
 - More tailored to students (timetable, assesment calendar, grade tracking) *side note: ohh, grade tracking, nice!*
 - Stricter colaboration guard rails to prevent cheating or stealing work *e.g. if you invite someone to work on a page, they can only access subpages and not the entire notebook*
 - Teachers would be able to share and asign homework from notes
+- The app could also get information from a Wikipedia page
 
 With the notes, you could link a sort of kahoot-like quiz to them (hence study tools).
 
 - Very similar to games like [Kahoot](https://kahoot.it), [Gimkit](https://gimkit.com) and [Quizlet](https://quizlet.live)
+- Flashcards?
 - More focused on student led or solo games instead of whole class *e.g. solo study, or revision with friends
 - Which links into another idea, a Discord Bot, that I'll discuss more on later
 
@@ -62,8 +64,6 @@ Problems:
 
 - Being student led, students can create thier own quiz sets. This could lead to some students creating extremely easy sets and cheating points -> in app cosmetics
 - Might be way beyond my skill level? (come to think of it, it probably is :D)
-
-
 
 
 
