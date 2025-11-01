@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Pokedex</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="pokedex.js"></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <header class="header content">
+            <div class="header-top">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/25.gif" alt="PokeDex Logo">
+                <h1>PokeDex</h1>
+            </div>
+            <code>Enter the console to work with the command line version!</code>
+        </header>
+
+        <div class="container content">
+            <div class="searchbox">
+                <input type="text" id="searchInput" name="pokemon" placeholder="Search for a Pokemon..." style="flex-grow: 3;">
+                <input type="button" id="searchButton" value="Go!" style="flex-grow: 1;" onclick="search();">
+            </div>
+            <div id="note" hidden>
+                <span style="color:red;">Pokemon not found. Please try again.</span>
+            </div>
+            <div id="readout" class="pokemon hidden">
+                <div class="overview">
+                    <img height="99" alt="Pokemon Avatar" id="pokemonAvatar" src="">
+                    <div style="display:flex;flex-direction:column;gap:0px;">
+                        <kbd id="pokemonID"></kbd>
+                        <span id="pokemonName"></span>
+                        <div id="pokemonTypes" class="typeRow"></div>
+                        <div class="statColumn">
+                            <span id="pokemonHeight"></span>
+                            <span id="pokemonWeight"></span>
+                        </div>
+                    </div>
+                </div>
+                <table id="pokemonStats">
+                    <thead>
+                        <tr>
+                            <th>Stat</th>
+                            <th>Value</th>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        <form id="form" hidden>
+            <input type="text" id="pokemonInput" name="pokemon" value="">
+        </form>
+    </body>
+</html>

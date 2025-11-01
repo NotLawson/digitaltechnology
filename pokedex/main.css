@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+code {
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box; /* ensure padding doesn't increase visual width */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* ensure column children start at the top */
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch; /* allow children (code) to fill the header width */
+}
+.header h1 { 
+    margin: 0;
+}
+
+/* Top row inside header: icon + title */
+.header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* vertically align image and text */
+    justify-content: center; /* center the row inside the header/content width */
+    gap: 8px;
+}
+.header-top h1 {
+    margin: 0; /* ensure no extra spacing */
+    font-size: 2rem; /* explicit size so image can match it exactly */
+    line-height: 1;
+}
+.header-top img {
+    height: 2rem; /* match the h1 font-size */
+    width: auto;
+    display: block;
+}
+
+/* Shared responsive width so header, code and container match */
+.content {
+    width: min(500px, 90%); /* responsive max width */
+    box-sizing: border-box;
+}
+
+.searchbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.overview {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* align children (avatar + name/types column) to the top */
+    gap: 12px;
+    justify-content: center;
+}
+
+.typeRow {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 2px;
+    justify-content: left;
+}
+
+#pokemonName {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#pokemonAvatar {
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+.statColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+kbd {
+    background-color: #f0f0f0;
+    border: solid 1px #ccc;
+    color: black;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+table, td, th {
+  border: 1px solid;
+  padding: 10px;
+  columns: 1fr 1fr;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hidden {
+    display: none;
+}
